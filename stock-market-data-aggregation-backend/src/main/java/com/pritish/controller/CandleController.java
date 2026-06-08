@@ -33,7 +33,6 @@ public class CandleController {
             @RequestParam(value = "start_date", required = false) String startDate,
             @RequestParam(value = "end_date",   required = false) String endDate) {
 
-        // Validate required params manually so we can return meaningful messages
         if (symbol == null || symbol.isBlank()) {
             return badRequest("Missing required parameter: symbol");
         }
